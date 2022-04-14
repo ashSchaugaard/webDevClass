@@ -29,7 +29,7 @@
     }
     
     input[type=submit] {
-      background-color: #940094;
+      background-color: #19b3b3;
       color: white;
       padding: 12px 20px;
       border: none;
@@ -38,12 +38,13 @@
     }
     
     input[type=submit]:hover {
-      background-color: #ff41ef;
+      background-color: #148888;
     }
     
     .container {
+      width: 30%;
       border-radius: 5px;
-      background-color: #f2f2f2;
+      background-color: #ffa79b;
       padding: 20px;
     }
     </style>
@@ -67,24 +68,24 @@
     <h3>Message Me</h3>
 
     <div class="container">
-      <form action="form-test.slccwebdev.com/form-success.php">
-        <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      <form action="/form-test.slccwebdev.com/form-success.php">
+        <label for="fname">First Name</label> <br>
+        <input type="text" id="fname" name="firstname" placeholder="Your name.."> <br>
     
-        <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <label for="lname">Last Name</label> <br>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name.."> <br>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Your Email..">  
-        <label for="country">Country</label>
-        <select id="country" name="country">
+        <label for="email">Email</label> <br>
+        <input type="email" id="email" name="email" placeholder="Your Email..">  <br>
+        <label for="country">Country</label> <br>
+        <select id="country" name="country"> 
           <option value="australia">Australia</option>
           <option value="canada">Canada</option>
           <option value="usa">USA</option>
-        </select>
+        </select> <br>
     
-        <label for="subject">Subject</label>
-        <textarea id="subject" name="subject" placeholder="Lets chat.." style="height:200px"></textarea>
+        <label for="subject">Subject</label> <br>
+        <textarea id="subject" name="subject" placeholder="Lets chat.." style="height:200px"></textarea> <br>
     
         <input type="submit" value="Send">
       </form>
