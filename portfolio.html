@@ -4,8 +4,11 @@
 <head>
 	<link rel="stylesheet" href="css/style.css">
 	<style>
-		body {font-family: Arial, Helvetica, sans-serif;}
+		body{
+			background-color: #db7093;
+		}
 		table {
+			margin: auto;
 			width:75%;
 			height:100%;
 			border: 2px solid #000000;
@@ -15,7 +18,7 @@
 		table th {
 			border:2px solid #000000;
 			padding:5px;
-			background:#ffffff;
+			background:#db7093;
 		}
 		table td {
 			border:2px solid #000000;
@@ -26,14 +29,19 @@
 
 <body>
     <header>
-        <nav>
-			<div class="navbar">
-				<a href="index.html">Home</a>
-				<a href="portfolio.html">Portfolio</a>
-				<a href="about.html">About Me</a>
-	
-			</div>
+        <div class="navbar">
+            <ul>
+                <li><img src="images/asLogo.png"></li>
+                <li><a href="index.html"><b>home</b></a></li>
+                <li class="active"><a href="portfolio.html"><b>portfolio</b></a></li>
+                <li><a href="about.html"><b>about me</b></a></li>
+                <li style="float:right"><a href="about.html"><u>send me an email:)</u></a></li>
+              </ul>
+        </div>
     </header>
+	<br/>
+	<br/>
+
 <h1>My Work</h1>
 
 
@@ -71,6 +79,12 @@
 	</tr>
 	</tbody>
 </table>
+<br/>
+
+<div class="footer">
+	<p>Footer</p>
+  </div>
+
 </body>
 
 </html>

@@ -5,14 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <style>
-    body {font-family: Arial, Helvetica, sans-serif;}
+
     * {box-sizing: border-box;}
+
+    body{
+			background-color: #a7f2fc;
+		}
     
+
     input[type=text], select, textarea {
       width: 100%;
       padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
+      border: 1px solid #D67280;
+      border-radius: 0px 0px 8px 0px;
       box-sizing: border-box;
       margin-top: 6px;
       margin-bottom: 16px;
@@ -21,8 +26,8 @@
     input[type=email], select, textarea {
       width: 100%;
       padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
+      border: 1px solid #D67280;
+      border-radius: 0px 0px 8px 0px;
       box-sizing: border-box;
       margin-top: 6px;
       margin-bottom: 16px;
@@ -30,46 +35,59 @@
     }
     
     input[type=submit] {
-      background-color: #19b3b3;
+      background-color: #D67280;
       color: white;
-      padding: 12px 20px;
+      padding: 12px 10Px;
       border: none;
-      border-radius: 4px;
+      border-radius: 0px 0px 8px 0px;
       cursor: pointer;
     }
     
     input[type=submit]:hover {
-      background-color: #148888;
+      background-color: #d6727fdc;
     }
     
     .container {
-      width: 100%;
-      border-radius: 5px;
-      background-color: #ffa79b;
-      padding: 20px;
+      width: flex;
+      padding: 5% 5%;
+      margin:5%;
+      justify-content: center;
+      align-items: center;
+      background: #A7F2FC;
+      box-shadow: 3px 3px 0px 6px #D67280;
+      border-radius: 0px 0px 8px 0px;
     }
     </style>
 </head>
 
 <body>
-    <header>
-      <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="about.html">About Me</a>
-
+  <header>
+    <div class="navbar">
+        <ul>
+            <li><img src="images/asLogo.png"></li>
+            <li><a href="index.html"><b>home</b></a></li>
+            <li><a href="portfolio.html"><b>portfolio</b></a></li>
+            <li class="active"><a href="about.html"><b>about me</b></a></li>
+            <li style="float:right"><a href="about.html"><u>send me an email:)</u></a></li>
+          </ul>
     </div>
-    </header>
-    <h1>This is me</h1>
-    <p>I have been designing things since childhood. Anything from Pocahontas cardboard cutouts to elaborate treasure maps leading to my buried pennies.  I thoroughly enjoy the full immersion into creativity and use that focus to create anything from business cards to social media posts. I am addicted to learning and LOVE finding creative solutions to any and all problems that cross my path. Outside of the computer, you will typically find me adventuring with my family, running, or inhaling the outdoors. 
-    </p>
-    <img src="images/ashleyface.gif" width="300px">
-    <h3>Resume</h3>
-    <a href="AshleySchaugaardResume.pdf" target="_blank" download><button>Download My Resume</button></a>
-    <h3>Message Me</h3>
+</header>
+    <br/>
+	<br/>
+  <br/>
+    <p>I will elaborate a little more on some 
+      <br/>of my work experience here.</p>
+      <br/>
+    
+    <div>
+      <a href="AshleySchaugaardResume.pdf" target="_blank" download><img src="images/DownloadResButton.png"  width="20%" class="center"; ></a>
+    </div>
+      
 
     <div class="container">
       <form action="http://form-test.slccwebdev.com/form-success.php" method="get" target="_blank">
+        <p>contact me!</p>
+        <br/>
         <label for="fname">First Name</label> <br>
         <input type="text" id="fname" name="firstname" placeholder="Your name.."> <br>
     
@@ -91,6 +109,11 @@
         <input type="submit" value="Send">
       </form>
     </div>
+
+    <div class="footer">
+      <p>Footer</p>
+    </div>
+
 </body>
 
 </html>
