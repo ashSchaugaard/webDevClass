@@ -1,92 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/index.css">
     <style>
 
-    * {box-sizing: border-box;}
-
     body{
-			background-color: #a7f2fc;
+			background-color: #D67280;
 		}
-    
 
-    input[type=text], select, textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #D67280;
-      border-radius: 0px 0px 8px 0px;
-      box-sizing: border-box;
-      margin-top: 6px;
-      margin-bottom: 16px;
-      resize: vertical;
-    }
-    input[type=email], select, textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #D67280;
-      border-radius: 0px 0px 8px 0px;
-      box-sizing: border-box;
-      margin-top: 6px;
-      margin-bottom: 16px;
-      resize: vertical;
-    }
-    
-    input[type=submit] {
-      background-color: #D67280;
-      color: white;
-      padding: 12px 10Px;
-      border: none;
-      border-radius: 0px 0px 8px 0px;
-      cursor: pointer;
-    }
-    
-    input[type=submit]:hover {
-      background-color: #d6727fdc;
-    }
-    
-    .container {
-      width: flex;
-      padding: 5% 5%;
-      margin:5%;
-      justify-content: center;
-      align-items: center;
-      background: #A7F2FC;
-      box-shadow: 3px 3px 0px 6px #D67280;
-      border-radius: 0px 0px 8px 0px;
-    }
+
     </style>
 </head>
 
 <body>
-  <header>
-    <div class="navbar">
-        <ul>
-            <li><img src="images/asLogo.png"></li>
-            <li><a href="index.html"><b>home</b></a></li>
-            <li><a href="portfolio.html"><b>portfolio</b></a></li>
-            <li class="active"><a href="about.html"><b>about me</b></a></li>
-            <li style="float:right"><a href="about.html"><u>send me an email:)</u></a></li>
-          </ul>
-    </div>
+  
+  <div id="page-container">
+    <div id="content-wrap">   
+        <div id="container0">
+            <a href="index.html"><img src="images/blueLogo.png"></a>
+            <a href="about.html" class="emailMe"><b>send me an email :)</b></a>
+        </div>
+     <div class="menu">
+         <div class="title">MENU</div>
+            <ul class="nav">
+                <li ><a href="index.html"><b>home</b></a></li>
+                <li ><a href="portfolio.html"><b>portfolio</b></a></li>
+                <li class="active"><a href="about.html"><b>email me</b></a></li>
+            </ul>
+        </div>
+                 
 </header>
     <br/>
 	<br/>
-  <br/>
-    <p>I will elaborate a little more on some 
-      <br/>of my work experience here.</p>
-      <br/>
-    
-    <div>
-      <a href="AshleySchaugaardResume.pdf" target="_blank" download><img src="images/DownloadResButton.png"  width="20%" class="center"; ></a>
-    </div>
-      
 
+<img src="images/ContactInfo.png" class="rounded mx-auto d-block" width="25%">
     <div class="container">
       <form action="http://form-test.slccwebdev.com/form-success.php" method="get" target="_blank">
-        <p>contact me!</p>
+        <p><b>contact me!</b></p>
         <br/>
         <label for="fname">First Name</label> <br>
         <input type="text" id="fname" name="firstname" placeholder="Your name.."> <br>
@@ -109,11 +64,20 @@
         <input type="submit" value="Send">
       </form>
     </div>
+  </div>
+  <br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
-    <div class="footer">
-      <p>Footer</p>
-    </div>
-
-</body>
+  <footer id="footer">
+          <a href="https://www.instagram.com/askow_art/"><p>Instagram</p></a>
+          <a href="AshleySchaugaardResume.pdf" target="_blank" download><p>Resume</p></a>
+          <a href="https://ashannescha.wixsite.com/website"><p>More of my Work</p></a>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</div>
 
 </html>
