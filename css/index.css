@@ -310,11 +310,21 @@ input[type="submit"]:hover {
 .container {
   width: 75%;
   padding: 5% 5%;
-  margin: 5% 10% 5%;
+  margin: 5% 11% 5%;
   justify-content: center;
   align-items: center;
   background: #a7f2fc;
   box-shadow: 3px 3px 0px 6px #d67280;
+  border-radius: 0px 0px 8px 0px;
+}
+
+button {
+  width: 10%;
+  margin: 0% 11%;
+  justify-content: center;
+  align-items: center;
+  background: #d67280;
+  color: white;
   border-radius: 0px 0px 8px 0px;
 }
 
@@ -410,7 +420,7 @@ input[type="submit"]:hover {
 
 .footerA {
   position: absolute;
-  top: 70rem;
+  top: 75rem;
   width: 100%;
   padding: 3em;
   width: 100%;
