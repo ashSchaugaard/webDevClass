@@ -109,6 +109,7 @@ h3 {
   width: 750px;
   height: 750px;
   object-fit: cover;
+  object-position: center right;
   top: -20rem;
   margin: 0rem 0rem 0rem 0rem;
   float: left;
@@ -396,7 +397,9 @@ input[type="submit"]:hover {
   top: 0;
   width: 100%;
   height: 55rem;
-  padding: 4rem;
+  /* top | right | bottom | left */
+
+  padding: 6rem 5rem 4rem 4rem;
   justify-content: center;
   align-items: center;
   background-color: #003252;
@@ -431,7 +434,7 @@ input[type="submit"]:hover {
   top: 0;
   width: 100%;
   padding: 23rem;
-  height: 55rem;
+  height: 64rem;
   background-color: #d6727fd8;
   z-index: 4;
 }
@@ -489,26 +492,26 @@ input[type="submit"]:hover {
   left: 2rem;
   object-fit: cover;
   object-position: center top;
-  z-index: 6;
+  z-index: 8;
 }
 
 #sunshine {
   position: absolute;
   right: 2rem;
-  top: 11rem;
+  top: 12rem;
   width: 55rem;
   height: 55rem;
   object-fit: cover;
   object-position: center top;
   overflow: hidden;
   border-image-slice: 1;
-  z-index: 8;
+  z-index: 6;
 }
 
 /* Parallax */
 
 .parallax1 {
-  background-image: url("../images/BookPrototype.jpg");
+  background-image: url("../images/portfolioImages/BookPrototype.jpg");
   min-height: 850px;
   background-attachment: fixed;
   background-position: center;
@@ -517,7 +520,7 @@ input[type="submit"]:hover {
 }
 
 .parallax {
-  background-image: url("../images/BoysAndGirlsClub.png");
+  background-image: url("../images/portfolioImages/BoysAndGirlsClub.png");
   min-height: 650px;
   background-attachment: fixed;
   background-position: center;
@@ -565,9 +568,9 @@ button {
   position: relative;
   display: flex;
   flex-direction: row;
-  width: fit-content;
+  flex-wrap: wrap;
   margin: auto;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 #card1 p {
@@ -578,16 +581,6 @@ button {
 
 /* end of Technical Skills Section */
 
-/*
-.col img {
-  width: 28rem;
-  height: 28rem;
-  object-fit: cover;
-  object-position: center top;
-  border-radius: 100%;
-  box-shadow: 3px 3px 0px 6px #003252;
-}
-*/
 .col h3 {
   margin-top: 25%;
   font-size: 40pt;
