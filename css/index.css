@@ -67,27 +67,10 @@ p {
 }
 
 #container1 {
-  width: 100%;
-  height: 200px;
   display: block;
-}
-
-#container1 p {
-  width: 36%;
+  width: 37%;
   position: relative;
-  top: 270px;
-  right: 24%;
-}
-
-.pIntro {
-  font-style: normal;
-  font-size: 28pt;
-}
-
-.pLight {
-  font-family: Montserrat;
-  font-style: light;
-  font-size: 16pt;
+  margin: 12rem 8rem;
 }
 
 h3 {
@@ -109,42 +92,54 @@ h3 {
   display: block;
   position: relative;
   width: 45%;
-  margin: 10rem;
+  /* top | right | bottom | left */
+  margin: 0rem 7rem 0rem 0rem;
   float: right;
-  top: 50rem;
+  top: 38rem;
 }
 
 .image1 {
   position: relative;
   width: 300px;
-  left: 8em;
-  top: 50rem;
+  margin: 25rem 6rem;
+}
+
+.image2 {
+  position: relative;
+  width: 750px;
+  height: 750px;
+  object-fit: cover;
+  top: -20rem;
+  margin: 0rem 0rem 0rem 0rem;
+  float: left;
 }
 
 .image3 {
   position: relative;
   width: 450px;
-  top: 70rem;
-  right: -12rem;
-}
-
-.image2 {
-  position: relative;
-  top: 40rem;
+  top: -5rem;
+  margin: 0rem 6rem;
+  float: right;
 }
 
 #container3 {
   position: relative;
-  top: -10rem;
   width: 30%;
-  margin: 10rem;
+  margin: 0rem 10rem 0rem 0rem;
+  top: -10rem;
   float: right;
 }
 
 .imageTS {
   width: 450px;
-  top: 39em;
-  left: 25em;
+  top: 0em;
+  left: 0em;
+}
+
+#myWork {
+  position: relative;
+  top: 5rem;
+  width: 20%;
 }
 
 .parent {
@@ -243,6 +238,8 @@ a {
   width: 150px;
 }
 
+/* Navigation end */
+
 .center {
   display: block;
   margin-left: auto;
@@ -274,6 +271,8 @@ a {
   text-decoration: none;
   color: #008cba;
 }
+
+/* Contact me form */
 
 input[type="text"],
 select,
@@ -307,7 +306,7 @@ input[type="submit"]:hover {
   background-color: #d6727fdc;
 }
 
-.container {
+.containerAbout {
   width: 75%;
   padding: 5% 5%;
   margin: 5% 11% 5%;
@@ -317,6 +316,218 @@ input[type="submit"]:hover {
   box-shadow: 3px 3px 0px 6px #d67280;
   border-radius: 0px 0px 8px 0px;
 }
+
+/* Contact me form end */
+
+/* Portfolio Containers */
+
+/* container 1 */
+
+.containerP1 {
+  position: relative;
+  width: 100%;
+  margin: 8rem 0 0rem 0rem;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  background-color: #a7f2fc;
+  border-radius: 0px 0px 8px 0px;
+}
+
+.containerP1 img {
+  width: 40rem;
+  height: 40rem;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 100%;
+  box-shadow: 3px 3px 0px 6px #45a9bb;
+  overflow: hidden;
+}
+
+.containerP1 h3 {
+  color: #45a9bb;
+  margin-right: 6rem;
+}
+
+.containerP1 h3 p {
+  color: #45a9bb;
+  margin-right: 8rem;
+}
+
+/* container 1 */
+
+/* Book */
+
+.containerP2 {
+  position: relative;
+  height: auto;
+  width: 100%;
+  border-radius: 0px 0px 8px 0px;
+  margin: 8rem 6rem 0rem 0rem;
+}
+
+#bookImg {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.containerP2 h3 {
+  position: absolute;
+  color: #003252;
+  top: 12rem;
+  /* top | right | bottom | left */
+  margin-left: 7rem;
+  font-size: 40pt;
+}
+
+.containerP2 p {
+  color: #003252;
+  padding-right: 58rem;
+  font-size: 14pt;
+}
+
+/* book */
+
+/* container 3 */
+
+.containerP3 {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 55rem;
+  padding: 4rem;
+  justify-content: center;
+  align-items: center;
+  background-color: #003252;
+  border-radius: 0px 0px 8px 0px;
+}
+
+.containerP3 img {
+  width: 40rem;
+  height: 40rem;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 100%;
+  box-shadow: 3px 3px 0px 6px #003252;
+}
+
+.containerP3 h3 {
+  color: #ffffff;
+  margin-left: 3rem;
+}
+
+.containerP3 h3 p {
+  color: #ffffff;
+  padding-right: 10rem;
+}
+
+/* container 3 */
+
+/* container 4 */
+
+.containerP4 {
+  position: relative;
+  top: 0;
+  width: 100%;
+  padding: 23rem;
+  height: 55rem;
+  background-color: #d6727fd8;
+  z-index: 4;
+}
+
+.containerP4 h3 {
+  color: #ffffff;
+}
+
+.containerP4 p {
+  color: #ffffff;
+}
+
+/* container 4 */
+
+/* container 5 */
+
+.containerP5 {
+  position: relative;
+  width: 100%;
+  margin: 8rem 0rem 0rem 0rem;
+  padding: 3rem;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 0px 0px 8px 0px;
+}
+
+.containerP5 img {
+  width: 40rem;
+  height: 40rem;
+  object-fit: cover;
+  object-position: center top;
+  overflow: hidden;
+}
+
+.containerP5 h3 {
+  color: #d67280;
+  margin-left: 4rem;
+  padding-right: 4rem;
+}
+
+.containerP5 h3 p {
+  color: #d67280;
+}
+
+/* container 5 */
+
+/* extra images on portfolio page */
+
+#macaron {
+  position: absolute;
+  width: 40rem;
+  height: 40rem;
+  top: 22rem;
+  left: 2rem;
+  object-fit: cover;
+  object-position: center top;
+  z-index: 6;
+}
+
+#sunshine {
+  position: absolute;
+  right: 2rem;
+  top: 11rem;
+  width: 55rem;
+  height: 55rem;
+  object-fit: cover;
+  object-position: center top;
+  overflow: hidden;
+  border-image-slice: 1;
+  z-index: 8;
+}
+
+/* Parallax */
+
+.parallax1 {
+  background-image: url("../images/BookPrototype.jpg");
+  min-height: 850px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax {
+  background-image: url("../images/BoysAndGirlsClub.png");
+  min-height: 650px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Parallax */
+
+/* extra images on portfolio page */
 
 button {
   width: 10%;
@@ -341,14 +552,22 @@ button {
   background-color: #003252;
 }
 
+/*Technical Skills Section */
+
+#tstitle {
+  position: relative;
+  top: 0rem;
+  display: block;
+  left: 4rem;
+}
+
 #card1 {
   position: relative;
   display: flex;
   flex-direction: row;
   width: fit-content;
   margin: auto;
-  justify-content: space-evenly;
-  top: 26rem;
+  justify-content: space-between;
 }
 
 #card1 p {
@@ -357,17 +576,9 @@ button {
   font-size: 12pt;
 }
 
-#tstitle {
-  position: relative;
-  top: 54rem;
-  display: block;
-  left: 4rem;
-}
+/* end of Technical Skills Section */
 
-#chevron-up-circle-outline {
-  color: #003252;
-}
-
+/*
 .col img {
   width: 28rem;
   height: 28rem;
@@ -376,60 +587,22 @@ button {
   border-radius: 100%;
   box-shadow: 3px 3px 0px 6px #003252;
 }
-
+*/
 .col h3 {
-  margin-top: 8rem;
-  font-size: 18pt;
+  margin-top: 25%;
+  font-size: 40pt;
 }
 
 .col p {
   font-size: 14pt;
 }
 
-.footer {
-  position: absolute;
-  top: 215rem;
-  width: 100%;
-  padding: 3em;
-  width: 100%;
-  background-color: #a7f2fc;
-  box-shadow: -1px -1px 4px 1px #00335238;
+/* Dumb ass stupid footers */
+
+footer p {
+  display: inline;
+  padding: 1rem;
   font-size: 12pt;
-  z-index: 100;
-}
-
-.footer ul {
-  list-style-type: none;
-}
-
-.footerP {
-  position: absolute;
-  top: 270rem;
-  width: 100%;
-  padding: 3em;
-  width: 100%;
-  background-color: #a7f2fc;
-  box-shadow: -1px -1px 4px 1px #00335238;
-  font-size: 12pt;
-  z-index: 100;
-}
-
-.footerP ul {
-  list-style-type: none;
-}
-
-.footerA {
-  position: absolute;
-  top: 75rem;
-  width: 100%;
-  padding: 3em;
-  width: 100%;
-  background-color: #a7f2fc;
-  box-shadow: -1px -1px 4px 1px #00335238;
-  font-size: 12pt;
-  z-index: 100;
-}
-
-.footerA ul {
-  list-style-type: none;
+  font-weight: bold;
+  float: left;
 }

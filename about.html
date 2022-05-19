@@ -10,12 +10,39 @@
    
 </head>
 
-<body>
+<body onload="promptFunction()">
   
+  <script>
+    function promptFunction() {
+      let visitor = prompt ("Hi! What is your name?");
+
+    let time = new Date().getHours();
+
+    console.log("I can't believe it's " + time)
+
+    let message = "";
+
+    if (time < 12){
+        message = "Good Morning, ";
+        console.log(message);
+    } else if (time < 17){
+        message = "Good Afternoon, ";
+        console.log(message);
+    } else {
+        message = "Good Night, ";
+        console.log(message);
+
+    }
+    alert(message + visitor + "!" + "\nThank you for reviewing my resume site.");
+}
+  </script>
+
+
+
   <div id="page-container">
     <div id="content-wrap">   
         <div id="container0">
-            <a href="index.html"><img src="images/pinkLogo.png"></a>
+            <a href="index.html"><img src="images/pinkLogo.png" alt="Ashley Schaugaard Logo Image"></a>
             <a href="about.html" class="emailMe"><b>send me an email :)</b></a>
         </div>
      <div class="menu">
@@ -26,6 +53,8 @@
                 <li class="active"><a href="about.html"><b>email me</b></a></li>
             </ul>
         </div>
+   
+
                  
 </header>
     <br/>
@@ -34,7 +63,7 @@
 
 
 
-    <div class="container">
+    <div class="containerAbout">
       <form action="http://form-test.slccwebdev.com/form-success.php" method="get" target="_blank">
         <p><b>contact me!</b></p>
         <br/>
@@ -75,15 +104,50 @@
   }
   </script>
   
-
-  <footer class="footerA">
-    <ul>
-         <li><a href="https://www.instagram.com/askow_art/" target="_blank"><p>Instagram</p></a></li>
-         <li><a href="AshleySchaugaardResume.pdf" target="_blank" download><p>Resume</p></a></li>
-         <li><a href="https://ashannescha.wixsite.com/website" target="_blank"><p>More of my Work</p></a></li>
-        <li><ion-icon src="/path/to/external/file.svg"></ion-icon></li> 
-     </ul>
- </footer>
+  <footer class="bg-white text-center text-white">
+    <div class="container p-4 pb-0">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Google -->
+        <a class="btn btn-outline-light btn-floating m-2" href="#!" role="button"><i class="fab fa-google"><img src="images/bootstrapIcons/envelope.svg"></i
+        ></a>
+  
+        <!-- Instagram -->
+        <a class="btn btn-outline-light btn-floating m-2" href="https://www.instagram.com/askow_art/" target="_blank" role="button">
+          <i class="fab fa-instagram">
+            <img src="images/bootstrapIcons/instagram.svg">
+          </i>
+        </a>
+  
+        <!-- Linkedin -->
+        <a class="btn btn-outline-light btn-floating m-2" href="#!" role="button">
+          <i class="fab fa-linkedin-in">
+            <img src="images/bootstrapIcons/linkedin.svg">
+            </i>
+        </a>
+  
+        <!-- Github -->
+        <a class="btn btn-outline-light btn-floating m-2" href="#!" role="button">
+          <i class="fab fa-github">
+            <img src="images/bootstrapIcons/github.svg">
+          </i>
+        </a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+   
+    <!-- Copyright -->
+    <div class="text-end p-2" style="background-color: rgba(69, 169, 187, 0.5);">
+      <a href="AshleySchaugaardResume.pdf" target="_blank" download><p>Resume</p></a>
+      <a href="https://ashannescha.wixsite.com/website" target="_blank"><p>More of my Work</p></a>
+      <a href="/about.html" target="_blank"><p>Contact Me</p></a>
+      <br/><br>
+      © 2022 Copyright:
+      <a class="text-white" >Ashley Schaugaard  _____</a>
+  
+    </div>
+    <!-- Copyright -->
+  </footer>
  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </div>

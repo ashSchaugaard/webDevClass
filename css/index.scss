@@ -1,0 +1,106 @@
+@mixin vertical-align($position) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin all-transition($time) {
+  transition: all $time;
+  -webkit-transition: all $time;
+}
+.menu {
+  font-weight: 100;
+  background: #efefef;
+  width: 150px;
+  height: 100%;
+  padding-left: 50px;
+  position: fixed;
+  z-index: 100;
+  -webkit-box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  right: -130px;
+  @include all-transition(0.3s);
+  color: #222;
+
+  &:hover,
+  &:focus {
+    transform: translate3d(-130px, 0, 0);
+    animation-timing-function: 1s ease-in;
+  }
+  .title {
+    top: 50%;
+    @include vertical-align(absolute);
+    transform: rotate(270deg);
+    left: 10px;
+    font-weight: 800;
+    font-size: 15px;
+  }
+  .nav {
+    @include vertical-align(absolute);
+    font-weight: 100;
+
+    li {
+      padding-bottom: 30px;
+      list-style-type: none;
+
+      a {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        @include all-transition(0.3s);
+
+        &:hover {
+          color: #aaa;
+        }
+      }
+    }
+  }
+}
+
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) { ... }
+
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+// `xs` returns only a ruleset and no media query
+// ... { ... }
+
+// `sm` applies to x-small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { ... }
+
+// `md` applies to small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { ... }
+
+// `lg` applies to medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { ... }
+
+// `xl` applies to large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { ... }
+
+// `xxl` applies to x-large devices (large desktops, less than 1400px)
+@media (max-width: 1399.98px) { ... }
