@@ -598,6 +598,9 @@ button {
 }
 
 /* Dumb ass stupid footers */
+footer {
+  margin-top: 2rem;
+}
 
 footer p {
   display: inline;
@@ -605,4 +608,8 @@ footer p {
   font-size: 12pt;
   font-weight: bold;
   float: left;
+}
+
+#copyright {
+  padding-right: 3.5rem;
 }
