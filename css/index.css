@@ -57,7 +57,7 @@ p {
 
 #container0 a {
   position: relative;
-  text-decoration: underline #a7f2fc;
+  text-decoration: underline #45a9bb;
   color: #003252;
   top: 2em;
 }
@@ -592,7 +592,7 @@ button {
 
 /* Dumb ass stupid footers */
 footer {
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 
 footer p {
