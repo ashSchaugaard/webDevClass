@@ -318,6 +318,11 @@ input[type="submit"]:hover {
   border-radius: 0px 0px 8px 0px;
 }
 
+#references {
+  width: 50vw;
+  font-size: 1.4em;
+}
+
 /* Contact me form end */
 
 /* Portfolio Containers */

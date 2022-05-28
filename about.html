@@ -93,6 +93,49 @@
     </div>
   </div>
 
+  <table class="table table-dark table-hover display-1" id="references"></table>
+  <tbody>
+    <tr>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td></td>
+    </tr>
+  </tbody>
+  
+<script>        
+
+let text = "<tr><th>Name</th><th>Email</th></tr>";
+
+  var people = [
+      { name: "Jessica Curran",email: "jessica.curran@slcc.edu"},
+      { name: "Virag White",email: "virag.white@slcc.edu"},
+      { name: "Kerry Gonzales", email: "kerry.gonzales@slcc.edu"},
+      { name: "Chris Dalley", email:"cdalley@vision.com"}
+  ];
+
+  for (let i = 0; i < people.length; i++) {
+      text += "<tr><td>" + people[i].name + "</td><td> " + people[i].email + "</td></tr>";
+  }
+
+  document.getElementById("references").innerHTML = text;
+  
+  </script>
+
   <button onclick="thankYou()">Thank You!</button>
 
   <p id="jsThankYou"></p>
