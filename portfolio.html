@@ -18,54 +18,60 @@
 </head>
 
 <body>
-	<div id="page-container">
-        <div id="content-wrap">   
-            <div id="container0">
-                <a href="index.html"><img src="images/pinkLogo.png" alt="Ashley Schaugaard Logo Image"></a>
-                <a href="about.html" class="emailMe"><strong>send me an email :)</strong></a>
-            </div>
-         <div class="menu">
-             <div class="title">MENU</div>
-                <ul class="nav">
-                    <li ><a href="index.html"><strong>home</strong></a></li>
-                    <li class="active"><a href="portfolio.html"><strong>portfolio</strong></a></li>
-                    <li><a href="about.html"><strong>email me</strong></a></li>
-                </ul>
-            </div>
+	<header>
+		<div class="heading">
+					<a href="index.html"><img class=pink-logo src="images/pinkLogo.png" alt="Ashley Schaugaard Logo Image"></a>
+					<a class="btn btn-floating m-2" href="about.html" role="button">
+					  <i class="fab fa-google">
+						<img id="email-icon" src="images/bootstrapIcons/envelope.svg">
+						</i>
+					</a>
+				  <!---  <a href="about.html" class="emailMe"><strong>email me :)</strong></a>-->
+				</div>
+			  <div class="menu">
+				 <div class="title">MENU</div>
+					<ul class="nav">
+						<li ><a href="index.html"><span>home</span></a></li>
+						<li class="active"><a href="portfolio.html"><span>portfolio</span></a></li>
+						<li><a href="about.html"><span>email me</span></a></li>
+					</ul>
+		</div>
+	</header>
 	<br/>
 	<br/>
-
-	<img src="images/portfolioImages/MyWork.png" class="rounded mx-auto d-block" width="25%" id="myWork">
-
-
+<main id="main">  
+<!---	<div>
+		<img src="images/portfolioImages/MyWork.png" class="rounded mx-auto d-block" width="25%" id="myWork">
+	</div> -->
 <div class="containerP1">
-	<div class="row row-cols-2">
-	  <div class="col">
+	<div >
+	  <div>
 		  <img src="images/portfolioImages/sewableAd.gif" alt="Sewing Subscription Box Ad">
 		</div>
-			<div class="col"> 
+			<div class="container"> 
 				<h3>
-					The <span style="color: #003252"><strong>Sewable</strong></span> Branding Designs,
-						<p class="pCursive">I was asked to come up with several logo ideas. After we narrowed down the <span style="color: #003252"><strong>favorite logo design</strong></span> I created some <span style="color: #003252"><strong>design templates</strong> </span> for the client.
+					The <span>Sewable</span> Branding Designs,
+				</h3>
+					<p class="pCursive">
+						I was asked to come up with several logo ideas. After we narrowed down the <span>favorite logo design</span> I created some 		<span>design templates</span> for the client.
 						<br/><br/>
-						These included a <span style="color: #003252"><strong>social media ad</strong></span>, a <span style="color: #003252"><strong>landing page</strong> </span> for their website and a <span style="color: #003252"><strong>style guide</strong> </span> to pull from.
-						</p>
-		  			</h3>
+						These included a <span>social media ad</span>, a <span>landing page </span> for their website and a <span>style guide</span> to pull from.
+					</p>
 				</div>
 	</div>
 </div>
 	
 <div class="parallax1">
 	<div class="containerP2">
-		<div>	
+		<div class="container">	
 		  	<h3>
-				<span style="color: #ffffff"><strong>Jack and Jill.</strong></span>
+				<span style="color: #ffffff">Jack and Jill.</span>
+				</h3>
 					<p class="pCursive">
-						This started out as a school project. I fell in love with it and kept going. I decided to turn into a book for my kids. <span style="color: #ffffff"><strong>Do they care? </strong> </span> Not at all. 	
+						This started out as a school project. I fell in love with it and kept going. I decided to turn into a book for my kids. <span style="color: #ffffff">Do they care?  </span> Not at all. 	
 						<br/><br/>
 						The idea was to use wingdings and create the <span style="color: #ffffff"><strong>story line</strong> </span> of Jack and Jill, only using the wingdings. Eventually I went back and added the <span style="color: #ffffff"><strong>Typography</strong></span>.
 					</p>
-			</h3>
 		</div>
 	</div>
 </div>
@@ -76,18 +82,18 @@
 -->
 
 <div class="containerP3">
-	<div class="row">
+	<div class="container">
 	  <div class="col-sm-8">
 		  <h3>
-			There is no short supply in need for <strong>Social Media Ads</strong>!
+			There is no short supply in need for <span style="color: #d67280">Social Media Ads</span>!
+			</h3>
 				<p class="pCursive">
-					They are a lot of fun to play with. You can make anything from <span style="color: #d67280"><strong>vibrant and vivid,</strong> </span>to chic and modern. It is fun to push the boundaries on design to <span style="color: #d67280"><strong>catch  attention</strong></span>.  
+					They are a lot of fun to play with. You can make anything from <span style="color: #d67280">vibrant and vivid, </span>to chic and modern. It is fun to push the boundaries on design to <span style="color: #d67280"> catch  attention </span>.  
 			 	</p>
-	  		</h3>
 		</div>
 	  
 	</div>
-	<div class="row">
+	<div class="container">
 	  <div class="col-sm">
 		  <img id="sunshine" src="images/portfolioImages/ClothingAd.png" alt="Woman Wearing Yellow Sweats">
 		</div>
@@ -100,31 +106,34 @@
 
   <div class="parallax">
 	  <div class="containerP4">
+		  <div class="container">
 		  <h3>
 			The <span style="color: #003252"><strong>Spence Eccles Club</strong></span>,
+			</h3>
 				<p class="pCursive">wanted a map on their wall to indicate the different activity rooms they had 	 throughout their <span style="color: #003252"><strong>Boys and Girls Club</strong></span>. 	 However, they did not know what they wanted.
 					<br/><br/>
 					This tends to be the case more often than not. In the end, they were very pleased with the end result.
 				</p>
-			</h3>
+		</div>
 			
   		</div>
 	</div>
 
 
   <div class="containerP1">
-	  <div class="row row-cols-2">
+	  <div class="container">
 		  <div class="col"><img src="images/portfolioImages/Overhead_334389251.png" alt="Catalog Image"></div>
-	  	<div class="col"> 
+	  	<div > 
 			<h3>
 				For the <span style="color: #003252"><strong>Display & Graphic Solutions</strong></span> Catalog Redesign,
+			</h3>
 		  		<p class="pCursive">
 					  I was asked to redesign the Display and Graphic Solutions <span style="color: #003252"><strong>Catalog</strong></span> for Vision Graphics this year. 
 					  <br/><br/>
 					  This turned into an <span style="color: #003252"><strong>elaborate</strong> </span>project. 
 					  From making up fun random logos to interesting <span style="color: #003252"><strong>Illustrator and Photoshop</strong></span> jobs.
 		  		</p>
-			</h3>
+			
 	 	 </div>	
   </div>	
 	  </div>
@@ -132,17 +141,18 @@
 	</div>
 
 <div class="containerP5">
-	  <div class="row row-cols-2">
+	  <div class="container">
 
-		<div class="col"> 
+		<div > 
 			<h3>
 		  		Design of the <span style="color: #95B8BC"><strong>RxMedic</strong></span><strong> Website</strong>
+			</h3>
 		  		<p class="pCursive">
 					was me working on integrating <span style="color: #95B8BC"><strong>User Experience</strong></span> as well as designing the Website from scratch. I used Figma and several of the programs from the <span style="color: #95B8BC"><strong>Adobe Creative Cloud</strong></span> to accomplish the final product. 
 		  			<br/><br/>
 		  			I found that I very much enjoy using  <span style="color: #95B8BC"><strong>Figma to create Prototypes</strong></span> for my clients.
 		  		</p>
-	  		</h3>	
+	  			
 		</div>
 	  <div class="col">
 		  <img src="images/portfolioImages/RxMedicHero.png" alt="Image of a Website">
@@ -153,20 +163,20 @@
 
 
 	<div class="containerP1">
-		<div class="row row-cols-2">
+		<div class="container">
 			<div class="col">
 				<img src="images/portfolioImages/SuncrestHeroImage.png" alt="Image of a Website">
 			</div>
 
-		<div class="col">
+		<div>
 			<h3>
 		  		Redesign of the <span style="color: #003252"><strong>Suncrest Website</strong></span>.
+			</h3>
 		  			<p class="pCursive">
 						After discussing with the client, we decided to update their <span style="color: #003252"><strong>logo design</strong></span>, and move forward with a more sleek design. I ended up using <span style="color: #003252"><strong>Figma</strong></span> and several <span style="color: #003252"><strong>Adobe Programs</strong></span> for this project.
 		  				<br/><br/>
 		  				The main thing I learned from this project was that sometimes your intuition on a project is the answer. Which is not always the case. 
 		  			</p>
-			</h3>
 		</div>
 	  </div>
 	</div>
@@ -174,7 +184,7 @@
 	<footer class=" text-center text-white" >
 		<div class="container p-4 pb-0">
 		  <!-- Section: Social media -->
-		  <section class="mb-4">
+		  <div class="mb-4">
 			<!-- Google -->
 			<a class="btn btn-outline-light btn-floating m-2" href="#!" role="button"><i class="fab fa-google"><img src="images/bootstrapIcons/envelope.svg"></i
 			></a>
@@ -199,7 +209,7 @@
 				<img src="images/bootstrapIcons/github.svg">
 			  </i>
 			</a>
-		  </section>
+		</div>
 		  <!-- Section: Social media -->
 		</div>
 	   

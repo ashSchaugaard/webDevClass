@@ -1,9 +1,20 @@
-*:after,
-*:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+/*
+==================
+Table of Contents 
+==================
+*/
+
+/*
+==================
+Table of Contents 
+==================
+*/
+
+/*
+===============
+ Global Styles
+===============
+*/
 
 html,
 body {
@@ -14,152 +25,278 @@ body {
   flex-direction: column;
 }
 #main {
-  flex-grow: 1;
+  flex-grow: 2;
 }
 
-body {
-  position: relative;
-  font-family: Montserrat;
-}
-
-#page-container {
-  position: relative;
-  min-height: 100vh;
-}
-
-/* index */
-
-.emailMe {
-  position: relative;
-  right: 7em;
-}
-
+h1,
+h3,
+h5,
 p {
+  color: #003252;
   text-align: left;
-  margin: auto;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14pt;
-  line-height: 133%;
-  color: #003252;
-}
-
-#container0 {
-  width: 100%;
-  height: 10px;
-  border: #db7093;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  float: left;
-  padding-left: 4%;
-}
-
-#container0 a {
-  position: relative;
-  text-decoration: underline #45a9bb;
-  color: #003252;
-  top: 2em;
-}
-
-#container0 img {
-  width: 40%;
-}
-
-#container1 {
-  display: block;
-  width: 37%;
-  position: relative;
-  margin: 12rem 8rem;
-}
-
-h3 {
-  display: block;
-  font-size: 36pt;
-  top: 25em;
-  right: 4.15em;
-  color: #003252;
-}
-
-.pCursive {
-  font-family: lora;
-  font-style: italic;
-  font-size: 16pt;
-  color: #003252;
-}
-
-#container2 {
-  display: block;
-  position: relative;
-  width: 45%;
-  /* top | right | bottom | left */
-  margin: 0rem 7rem 0rem 0rem;
-  float: right;
-  top: 38rem;
-}
-
-.image1 {
-  position: relative;
-  width: 300px;
-  margin: 25rem 6rem;
-}
-
-.image2 {
-  position: relative;
-  width: 750px;
-  height: 750px;
-  object-fit: cover;
-  object-position: center right;
-  top: -20rem;
-  margin: 0rem 0rem 0rem 0rem;
-  float: left;
-}
-
-.image3 {
-  position: relative;
-  width: 450px;
-  top: -5rem;
-  margin: 0rem 6rem;
-  float: right;
-}
-
-#container3 {
-  position: relative;
-  width: 30%;
-  margin: 0rem 10rem 0rem 0rem;
-  top: -10rem;
-  float: right;
-}
-
-.imageTS {
-  width: 450px;
-  top: 0em;
-  left: 0em;
-}
-
-#myWork {
-  position: relative;
-  top: 5rem;
-  width: 20%;
-}
-
-.parent {
-  position: relative;
-  top: 0;
-  left: 0;
-}
-
-.imageSewable {
-  position: relative;
-  width: 100%;
-  object-fit: cover;
-  left: 0;
+  font-family: "Roboto Light";
 }
 
 h1 {
-  text-align: center;
+  font-size: 2.2em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+p {
+  font-size: 1.25em;
+  line-height: 133%;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 8rem;
+}
+
+.container {
+  padding-right: 3rem;
+}
+
+/*
+===============
+ Global Styles
+===============
+*/
+
+/*
+===============
+  Typography
+===============
+*/
+
+.pCursive {
+  font-weight: 400;
+  font-size: 1.25em;
+  line-height: 133%;
+}
+
+span {
+  font-family: "Roboto Medium";
   color: #003252;
 }
+
+/*
+===============
+  Typography
+===============
+*/
+
+/*
+===============
+  Components 
+===============
+*/
+
+button {
+  width: 10%;
+  margin: 0% 11%;
+  justify-content: center;
+  align-items: center;
+  background: #d67280;
+  color: white;
+  border-radius: 0px 0px 8px 0px;
+}
+
+.space {
+  margin: 2.5%;
+}
+
+.btn-primary {
+  background-color: #d67280;
+  border: #d67280;
+  margin-top: 2rem;
+}
+.btn-primary:hover {
+  background-color: #003252;
+}
+
+/* ||||||||||||
+  Contact form
+|||||||||||||| */
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #a7f2fc;
+  border-radius: 0px 0px 8px 0px;
+  resize: vertical;
+}
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #a7f2fc;
+  border-radius: 0px 0px 8px 0px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #d67280;
+  color: white;
+  padding: 4px 10px 4px;
+  border: none;
+  border-radius: 0px 0px 8px 0px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #d6727fdc;
+}
+
+.containerAbout {
+  width: 75%;
+  padding: 5% 5%;
+  margin: 5% 11% 5%;
+  justify-content: center;
+  align-items: center;
+  background: #a7f2fc;
+  box-shadow: 3px 3px 0px 6px #d67280;
+  border-radius: 0px 0px 8px 0px;
+}
+
+/* ||||||||||||
+  Contact form
+|||||||||||||| */
+
+/* ||||||||||||
+      Tables 
+||||||||||||||  */
+
+table {
+  margin: auto;
+  width: 75%;
+  height: 100%;
+  border: 2px solid #000000;
+  padding: 5px;
+}
+table th {
+  border: 2px solid #000000;
+  padding: 5px;
+}
+table td {
+  border: 2px solid #000000;
+  padding: 5px;
+}
+
+#references {
+  width: 50vw;
+  font-size: 1.4em;
+}
+
+/* ||||||||||||
+      Tables 
+||||||||||||||  */
+
+/*
+===============
+  Components 
+===============
+*/
+
+/*
+===============
+    Cards
+===============
+*/
+
+.card-title {
+  font-size: 1.75em;
+  text-align: center;
+}
+
+.card-text {
+  font-size: 1em;
+  text-align: center;
+}
+
+.card1 {
+  position: relative;
+  top: 4rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto 10rem auto;
+}
+
+.card {
+  max-width: 350px;
+  padding: 1em;
+}
+
+.card img {
+  width: 20em;
+  height: 20em;
+}
+
+/*
+===============
+    Cards
+===============
+*/
+
+/*
+===============
+    Images
+===============
+*/
+
+.pink-logo {
+  width: 10rem;
+}
+
+.image-1 {
+  position: relative;
+  width: 90vw;
+  height: 35vh;
+  max-width: 450px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.image-2 {
+  position: relative;
+  width: 90vw;
+  max-width: 800px;
+  float: left;
+}
+
+.image-3 {
+  width: 65vw;
+  max-width: 600px;
+  margin: 2.5rem;
+  float: right;
+}
+
+.image-tech-skills {
+  position: relative;
+  top: 2rem;
+  width: 70vw;
+  margin: auto;
+  max-width: 400px;
+}
+
+.bg-img {
+  width: 95vw;
+}
+
+/*
+===============
+    Images
+===============
+*/
 
 a {
   text-decoration: none;
@@ -170,7 +307,11 @@ a {
   margin: 2.5%;
 }
 
-/* Navigation */
+/*
+===============
+  Navigation
+===============
+*/
 
 .menu {
   font-weight: 100;
@@ -239,91 +380,63 @@ a {
   width: 150px;
 }
 
-/* Navigation end */
+/*
+===============
+  Navigation
+===============
+*/
 
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
+/*
+===============
+    Layout 
+===============
+*/
 
-table {
-  margin: auto;
-  width: 75%;
-  height: 100%;
-  border: 2px solid #000000;
-  padding: 5px;
-}
-table th {
-  border: 2px solid #000000;
-  padding: 5px;
-}
-table td {
-  border: 2px solid #000000;
-  padding: 5px;
+.heading {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.75rem;
+  width: 100vw;
+  border-bottom: 1mm groove #00335207;
 }
 
-h1 {
-  text-align: center;
+#email-icon {
+  width: 1.5rem;
+}
+
+.emailMe {
+  font-size: 0.8em;
+  text-decoration: underline 1.5pt #008cba;
   color: #003252;
 }
 
-a {
-  text-decoration: none;
-  color: #008cba;
+.text-intro {
+  padding: 1.5rem 0.65rem 0rem 0.5rem;
+  position: relative;
 }
 
-/* Contact me form */
-
-input[type="text"],
-select,
-textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #a7f2fc;
-  border-radius: 0px 0px 8px 0px;
-  resize: vertical;
-}
-input[type="email"],
-select,
-textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #a7f2fc;
-  border-radius: 0px 0px 8px 0px;
-  resize: vertical;
+.text-second {
+  position: relative;
+  padding: 2rem 0.58rem 2rem 0.75rem;
 }
 
-input[type="submit"] {
-  background-color: #d67280;
-  color: white;
-  padding: 4px 10px 4px;
-  border: none;
-  border-radius: 0px 0px 8px 0px;
-  cursor: pointer;
+.text-third {
+  position: relative;
+  padding: 2rem 0.58rem 2rem 0.75rem;
 }
 
-input[type="submit"]:hover {
-  background-color: #d6727fdc;
+.text-second,
+.text-second h3,
+.text-second p {
+  text-align: end;
 }
 
-.containerAbout {
-  width: 75%;
-  padding: 5% 5%;
-  margin: 5% 11% 5%;
-  justify-content: center;
-  align-items: center;
-  background: #a7f2fc;
-  box-shadow: 3px 3px 0px 6px #d67280;
-  border-radius: 0px 0px 8px 0px;
-}
-
-#references {
-  width: 50vw;
-  font-size: 1.4em;
-}
-
-/* Contact me form end */
+/*
+===============
+    Layout 
+===============
+*/
 
 /* Portfolio Containers */
 
@@ -331,18 +444,17 @@ input[type="submit"]:hover {
 
 .containerP1 {
   position: relative;
-  width: 100%;
-  margin: 8rem 0 0rem 0rem;
-  padding: 2rem;
+  margin: 5rem 0.5rem 0.5rem 1rem;
   justify-content: center;
   align-items: center;
   background-color: #a7f2fc;
   border-radius: 0px 0px 8px 0px;
+  height: auto;
 }
 
 .containerP1 img {
-  width: 40rem;
-  height: 40rem;
+  width: 80vw;
+  height: 80vw;
   object-fit: cover;
   object-position: center top;
   border-radius: 100%;
@@ -351,13 +463,13 @@ input[type="submit"]:hover {
 }
 
 .containerP1 h3 {
+  padding: 1rem;
   color: #45a9bb;
-  margin-right: 6rem;
 }
 
-.containerP1 h3 p {
+.containerP1 p {
+  padding: 1rem;
   color: #45a9bb;
-  margin-right: 8rem;
 }
 
 /* container 1 */
@@ -369,28 +481,25 @@ input[type="submit"]:hover {
   height: auto;
   width: 100%;
   border-radius: 0px 0px 8px 0px;
-  margin: 8rem 6rem 0rem 0rem;
-}
-
-#bookImg {
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
 }
 
 .containerP2 h3 {
-  position: absolute;
   color: #003252;
   top: 12rem;
   /* top | right | bottom | left */
-  margin-left: 7rem;
+  padding: 2.3rem 2rem 0rem 2rem;
   font-size: 40pt;
 }
 
 .containerP2 p {
   color: #003252;
-  padding-right: 58rem;
-  font-size: 14pt;
+  top: 1rem;
+  background-color: #45a9bbef;
+  padding: 2.75rem;
+  margin: 1em;
+  font-family: "Roboto";
+  box-shadow: 3px 3px 0px 6px #ffffff;
+  border-radius: 0px 0px 8px 0px;
 }
 
 /* book */
@@ -399,21 +508,15 @@ input[type="submit"]:hover {
 
 .containerP3 {
   position: relative;
-  top: 0;
   width: 100%;
-  height: 55rem;
+  height: 30rem;
   /* top | right | bottom | left */
-
-  padding: 6rem 5rem 4rem 4rem;
-  justify-content: center;
-  align-items: center;
+  padding: 4rem 2rem 0rem 1rem;
   background-color: #003252;
   border-radius: 0px 0px 8px 0px;
 }
 
 .containerP3 img {
-  width: 40rem;
-  height: 40rem;
   object-fit: cover;
   object-position: center top;
   border-radius: 100%;
@@ -422,12 +525,10 @@ input[type="submit"]:hover {
 
 .containerP3 h3 {
   color: #ffffff;
-  margin-left: 3rem;
 }
 
-.containerP3 h3 p {
+.containerP3 p {
   color: #ffffff;
-  padding-right: 10rem;
 }
 
 /* container 3 */
@@ -436,11 +537,13 @@ input[type="submit"]:hover {
 
 .containerP4 {
   position: relative;
-  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  padding: 23rem;
+  padding: 12rem 2rem 2rem 2rem;
   height: 64rem;
-  background-color: #d6727fd8;
+  background-color: #d6727fe1;
   z-index: 4;
 }
 
@@ -459,29 +562,26 @@ input[type="submit"]:hover {
 .containerP5 {
   position: relative;
   width: 100%;
-  margin: 8rem 0rem 0rem 0rem;
-  padding: 3rem;
+  padding: 1rem;
   justify-content: center;
   align-items: center;
   background-color: #ffffff;
-  border-radius: 0px 0px 8px 0px;
 }
 
 .containerP5 img {
-  width: 40rem;
-  height: 40rem;
+  width: 85vw;
+  height: 85vw;
   object-fit: cover;
   object-position: center top;
   overflow: hidden;
+  margin: auto;
 }
 
 .containerP5 h3 {
   color: #d67280;
-  margin-left: 4rem;
-  padding-right: 4rem;
 }
 
-.containerP5 h3 p {
+.containerP5 p {
   color: #d67280;
 }
 
@@ -491,10 +591,9 @@ input[type="submit"]:hover {
 
 #macaron {
   position: absolute;
-  width: 40rem;
-  height: 40rem;
-  top: 22rem;
-  left: 2rem;
+  width: 40vw;
+  height: 40vw;
+  left: 0rem;
   object-fit: cover;
   object-position: center top;
   z-index: 8;
@@ -503,9 +602,8 @@ input[type="submit"]:hover {
 #sunshine {
   position: absolute;
   right: 2rem;
-  top: 12rem;
-  width: 55rem;
-  height: 55rem;
+  width: 55vw;
+  height: 55vw;
   object-fit: cover;
   object-position: center top;
   overflow: hidden;
@@ -517,11 +615,11 @@ input[type="submit"]:hover {
 
 .parallax1 {
   background-image: url("../images/portfolioImages/BookPrototype.jpg");
-  min-height: 850px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  min-height: 800px;
 }
 
 .parallax {
@@ -537,63 +635,24 @@ input[type="submit"]:hover {
 
 /* extra images on portfolio page */
 
-button {
-  width: 10%;
-  margin: 0% 11%;
-  justify-content: center;
-  align-items: center;
-  background: #d67280;
-  color: white;
-  border-radius: 0px 0px 8px 0px;
-}
-
-.space {
-  margin: 2.5%;
-}
-
-.btn-primary {
-  background-color: #d67280;
-  border: #d67280;
-  margin-top: 2rem;
-}
-.btn-primary:hover {
-  background-color: #003252;
-}
-
 /*Technical Skills Section */
-
-#tstitle {
-  position: relative;
-  top: 0rem;
-  display: block;
-  left: 4rem;
-}
-
-#card1 {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: auto;
-  justify-content: space-evenly;
-}
-
-#card1 p {
-  font-family: lora;
-  font-style: italic;
-  font-size: 12pt;
-}
 
 /* end of Technical Skills Section */
 
 .col h3 {
-  margin-top: 25%;
-  font-size: 40pt;
+  margin-top: 5%;
+  font-size: 4.5em;
 }
 
 .col p {
-  font-size: 14pt;
+  font-size: 0.25em;
 }
+
+/*
+===============
+    Footer
+===============
+*/
 
 /* Dumb ass stupid footers */
 footer {
@@ -602,12 +661,35 @@ footer {
 
 footer p {
   display: inline;
+  font-size: 0.8em;
   padding: 1rem;
-  font-size: 12pt;
-  font-weight: bold;
+  font-family: "Roboto Medium";
   float: left;
 }
 
 #copyright {
   padding-right: 3.5rem;
+}
+
+/*
+===============
+    Footer
+===============
+*/
+
+/*
+===============
+  Media Queries
+===============
+*/
+
+@media (max-width: 375px) {
+  .containerP1,
+  .containerP2,
+  .containerP3,
+  .containerP4,
+  .containerP5 {
+    display: flex;
+    flex-direction: column;
+  }
 }

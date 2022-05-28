@@ -3,113 +3,173 @@
 
 
 <head>
-    <title>Landing Page to My Portfolio</title>
+    <title>Ashley Schaugaard</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
     <style>
+
       
-        
+      
+      /*  
+
     body {
         background-image: url(images/indexImages/ashleyfaceLargecrop.gif);
         background-color: white;
-        background-size: 90%;
-        background-position: right 2em top 6em;
+        background-size: 80vh;
+        background-position: right 0em top 10em;
         background-repeat: no-repeat;
         position: relative;
-        }
+      
+        } */
+        
     </style>
 </head>
 
 <body>
    <header>
        
-    <div id="container0">
-      <a href="index.html"><img src="images/pinkLogo.png" alt="Ashley Schaugaard Logo Image"></a>
-      <a href="about.html" class="emailMe"><strong>send me an email :)</strong></a>
+    <div class="heading">
+      <a href="index.html"><img class=pink-logo src="images/pinkLogo.png" alt="Ashley Schaugaard Logo Image"></a>
+      <a class="btn btn-floating m-2" href="about.html" role="button">
+        <i class="fab fa-google">
+          <img id="email-icon" src="images/bootstrapIcons/envelope.svg">
+          </i>
+      </a>
+    <!---  <a href="about.html" class="emailMe"><strong>email me :)</strong></a>-->
   </div>
 <div class="menu">
    <div class="title">MENU</div>
       <ul class="nav">
-          <li class="active"><a href="index.html"><strong>home</strong></a></li>
-          <li ><a href="portfolio.html"><strong>portfolio</strong></a></li>
-          <li><a href="about.html"><strong>email me</strong></a></li>
+          <li class="active"><a href="index.html"><span>home</span></a></li>
+          <li ><a href="portfolio.html"><span>portfolio</span></a></li>
+          <li><a href="about.html"><span>email me</span></a></li>
       </ul>
   </div>
    </header>    
    <main id="main">                 
     <section>
-        <div id="container1">
-            <h3>Hi, I am <b>Ashley</b>.  I've been <b>designing</b> since childhood.
-              <p>Anything from my Pocahontas cardboard cutouts to <b>elaborate treasure maps </b>leading to my buried pennies.</p>
-            </h3>  
-            
-        </div>
-    </section>    
-
-        <section>
-            <div>
-                    <img src="images/indexImages/shoeShort.gif" class="image1" alt="Flashing Shoes">
-            
-            <div id="container2">
-                <h3>
-                    Outside of the computer,
-                    <p class="pCursive">you will typically find me adventuring with  my family, running, and <b>inhaling the outdoors</b>. 
-                    <br/><br/>
-                    I am addicted to learning and LOVE finding <b>creative solutions</b> to any and all problems that cross my path.
-                    </p>      
-                </h3>
+      <div class="container">
+        <div class="text-intro">
+          <h1>Hi, I am <span>Ashley</span>. I've been <span>designing</span> since childhood.
+          </h1>
+              <p>
+                Anything from my Pocahontas cardboard cutouts to <span>elaborate treasure maps </span>leading to my buried pennies.
+              </p>
             </div>
-          <div id="container3">  
+              <div > 
+                <img class="bg-img" src="images/indexImages/ashleyfaceLargecrop.gif" alt="Profile Gif">
+        </div>
+        </div>
+      
+
+            <div >  
+              <div class="container">
+              <div class="text-second">
+                  <h3>
+                    <span>Outside</span> of the computer,
+                  </h3> 
+                    <p class="pCursive">you will typically find me adventuring with  my family, running, and <span>inhaling the outdoors</span>. 
+                    <br/><br/>
+                    I am addicted to learning and LOVE finding <span>creative solutions</span> to any and all problems that cross my path.
+                    </p>  
+                </div>    
+            </div>
+              <div >
+                    <img class="image-1" src="images/indexImages/shoeShort.gif"  alt="Flashing Shoes">
+              </div>
+        <div class="container"> 
+          <div class="text-third">  
                 <h3>
-                    I adore that there can be <b>multiple</b> solutions to a problem.
-                        <p class="pCursive">I thoroughly enjoy the full immersion into <b>creativity</b> and use that focus to create anything from business cards to social media posts.</p>
+                    I adore that there can be <span>multiple</span> solutions to a problem.
                 </h3>
+                      <p class="pCursive">
+                          I thoroughly enjoy the full immersion into <span>creativity</span> and use that focus to create anything from business cards to social media posts.
+                      </p>
             </div>  
+          </div>
             <div >
-               <img src="images/indexImages/ORANGE.gif" class="image2" alt="Newsletter Image">
+               <img class="image-2" src="images/indexImages/ORANGE.gif"  alt="Newsletter Image">
             </div> 
                 <div >
-                  <img src="images/indexImages/InstagramADS.png" class="image3" alt="Yoga Pose Image Pink">
+                  <img class="image-3" src="images/indexImages/InstagramADS.png"  alt="Yoga Pose Image Pink">
                 </div>
           </div>
-        </section>
+       
 
-        <section >
-                <img id="tstitle" src="images/indexImages/TechnicalSkills.png" class="rounded mx-auto d-block" width="25%" alt="Technical Skills">
-            <div id="card1">
-            <div class="card" style="width: 20rem;">
-                <img src="images/indexImages/newsletter.png" id="imageOrange" class="card-img-top" alt="Woman Holding Oranges For Eyes">
-                <div class="card-body">
-                  <h5 class="card-title">CREATIVE CLOUD</h5>
-                  <p class="card-text">Illustrator | Photoshop | InDesign
-                    <br/>Adobe XD | After Effects | Animate</p>
-                  <a href="https://ashannescha.wixsite.com/website/socialmediaads" class="btn btn-primary">See More!</a>
-                </div>
-              </div>
-              <div class="card" style="width: 20rem;">
+    
+              <div>
+                <img class=image-tech-skills src="images/indexImages/TechnicalSkills.png" class="rounded mx-auto d-block" alt="Technical Skills">
+              
+
+            <div class="card1">
+              <div class="card">
                 <img src="images/indexImages/PinkNoise.png" class="card-img-top" alt="Pink Noise Alblum Art">
-                <div class="card-body">
-                  <h5 class="card-title">GRAPHIC DESIGN</h5>
-                  <p class="card-text">Typography | Newsletter | Branding
-                    <br/>Logo Design | Stylesheets | Social Media</p>
-                  <a href="#" class="btn btn-primary">See More!</a>
-                </div>
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      GRAPHIC DESIGN
+                    </h5>
+                      <p class="card-text">
+                        Typography | Newsletter | Branding
+                        <br/>
+                        Logo Design | Stylesheets | Social Media
+                      </p>
+                    <a href="#" class="btn btn-primary">See More!</a>
+                  </div>
               </div>
-              <div class="card" style="width: 20rem;">
+              
+              <div class="card">
                 <img src="images/indexImages/eoao.gif" class="card-img-top" alt="Large Eye Opening and Closing" >
-                <div class="card-body">
-                  <h5 class="card-title">WEB DESIGN</h5>
-                  <p class="card-text">HTML5 | CSS | JavaScript | MySQL
-                    <br/> PHP | Wordpress | Figma | UI/UX</p>
-                  <a href="https://ashannescha.wixsite.com/website/sewable" class="btn btn-primary">See More!</a>
-                </div>
-                
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      WEB DESIGN
+                    </h5>
+                      <p class="card-text">
+                        Illustrator | Photoshop
+                        <br/>  
+                        Adobe XD | Figma | UI/UX
+                      </p>
+                    <a href="https://ashannescha.wixsite.com/website/sewable" class="btn btn-primary">See More!</a>
+                  </div>
               </div>
-            </div>     
-                   
+
+              <div class="card">
+                <img src="images/portfolioImages/SuncrestHeroImage.png" class="card-img-top" alt="Large Eye Opening and Closing" >
+                <div class="card-body">
+                  <h5 class="card-title">
+                    WEB DEVELOPMENT
+                  </h5>
+                    <p class="card-text">
+                      HTML5 | CSS | JavaScript 
+                      <br/>  
+                      MySQL | PHP | Wordpress 
+                    </p>
+                      <a href="https://ashannescha.wixsite.com/website/sewable" class="btn btn-primary">See More!</a>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="images/indexImages/newsletter.png" id="imageOrange" class="card-img-top" alt="Woman Holding Oranges For Eyes">
+              <div class="card-body">
+                  <h5 class="card-title">
+                    CREATIVE CLOUD
+                  </h5>
+                    <p class="card-text">
+                      Illustrator | Photoshop | InDesign
+                      <br/>
+                      Adobe XD | After Effects | Animate
+                    </p>
+                <a href="https://ashannescha.wixsite.com/website/socialmediaads" class="btn btn-primary"> See More!</a>
+              </div>
+            </div>
+            </div>   
+          </div>
+
         </section>
 
         </main>
@@ -118,52 +178,68 @@
 
 
   <footer class=" text-center text-white" style="background-color: rgba(167, 242, 252)">
-  <div class="container p-4 pb-0">
-    <!-- Section: Social media -->
-    <section class="mb-4">
-      <!-- Google -->
-      <a class="btn btn-outline-light btn-floating m-2" href="#!" role="button"><i class="fab fa-google"><img src="images/bootstrapIcons/envelope.svg"></i
-      ></a>
+   
+    <div class="container p-4 pb-0">
 
-      <!-- Instagram -->
-      <a class="btn btn-outline-light btn-floating m-2" href="https://www.instagram.com/askow_art/" target="_blank" role="button">
-        <i class="fab fa-instagram">
-          <img src="images/bootstrapIcons/instagram.svg">
-        </i>
-      </a>
+       <!-- Section: Social media -->
+         <div class="mb-4">
+          <!-- Google -->
+            <a class="btn btn-outline-light btn-floating m-2" href="about.html" role="button">
+              <i class="fab fa-google">
+                <img src="images/bootstrapIcons/envelope.svg">
+                </i>
+            </a>
 
-      <!-- Linkedin -->
-      <a class="btn btn-outline-light btn-floating m-2" href="#!" role="button">
-        <i class="fab fa-linkedin-in">
-          <img src="images/bootstrapIcons/linkedin.svg">
-          </i>
-      </a>
+          <!-- Instagram -->
+            <a class="btn btn-outline-light btn-floating m-2" href="https://www.instagram.com/askow_art/"   target="_blank" role="button">
+              <i class="fab fa-instagram">
+                <img src="images/bootstrapIcons/instagram.svg">
+              </i>
+            </a>
 
-      <!-- Github -->
-      <a class="btn btn-outline-light btn-floating m-2" href="#!" role="button">
-        <i class="fab fa-github">
-          <img src="images/bootstrapIcons/github.svg">
-        </i>
-      </a>
-    </section>
-    <!-- Section: Social media -->
-  </div>
- 
-  <!-- Copyright -->
-  <div class="text-end p-2" style="background-color: rgba(69, 169, 187, 0.5);">
-    <a href="AshleySchaugaardResume.pdf" target="_blank" download><p>Resume</p></a>
-    <a href="https://ashannescha.wixsite.com/website" target="_blank"><p>More of my Work</p></a>
-    <a href="/about.html" target="_blank"><p>Contact Me</p></a>
-    <br/><br>
-    <div id="copyright"> 
-      © 2022 Copyright:
-		  <a class="text-white">Ashley Schaugaard</a>
+          <!-- Linkedin -->
+            <a class="btn btn-outline-light btn-floating m-2" href="#!" role="button">
+              <i class="fab fa-linkedin-in">
+                <img src="images/bootstrapIcons/linkedin.svg">
+              </i>
+            </a>
+
+          <!-- Github -->
+            <a class="btn btn-outline-light btn-floating m-2" href="#!" role="button">
+              <i class="fab fa-github">
+                <img src="images/bootstrapIcons/github.svg">
+              </i>
+            </a>
+          </div>
+      <!-- Section: Social media -->
+
     </div>
-  </div>
+ 
+      <!-- Copyright -->
+      <div class="text-end p-2" style="background-color: rgba(69, 169, 187, 0.5);">
+        <a href="AshleySchaugaardResume.pdf" target="_blank" download>
+          <p>Resume</p>
+        </a>
+        <a href="https://ashannescha.wixsite.com/website" target="_blank">
+          <p>More of my work</p>
+        </a>
+        <a href="/about.html" target="_blank">
+          <p>Contact Me</p>
+        </a>
+        <br/><br>
+      
+      <div id="copyright"> 
+      © 2022 Copyright |
+		  <a class="text-white">
+        Ashley Schaugaard
+      </a>
+      </div>
+    </div>
   <!-- Copyright -->
-</footer>
+  </footer>
   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-</body>
+
+  </body>
 
 </html>
