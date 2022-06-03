@@ -90,35 +90,41 @@
         <label for="subject">Subject</label> <br>
         <textarea id="subject" name="subject" placeholder="Lets chat.." style="height:200px"></textarea> <br>
     
-        <input onclick="tryIt()" type="submit">
+        <input onclick="contact()" type="submit">
       </form>
     </div>
   </div>
 
-  <button id="toggle">Click Me!</button>
+  <button id="toggle">Hide This Section</button>
 
   <script>
-    function tryIt() {
-    try {
-      var difference = document.getElementById("fname").value;
-      if ( difference === "") {
-        throw "Field cannot be empty.";
-      }
-      else if (difference === string) {
-        throw "That works great, thanks!";
-      }
-    }catch (error) {
-      console.log = "Incorrect Input: <strong>" + error + "/strong";
-    }
-  }
+
+
+  function contact() {
+      const message = document.getElementById("fname");
+        message.innerHTML = "";
+        
+          try {
+            if(contact == "") {throw "Field cannot be empty.";
+              }
+                else if(isNaN(contact)) 
+                  {throw "This is a number";
+                    contact = Number(contact);
+                      }
+                        else if(contact === "") {throw "That works great, thanks!";
+                          }
+                          }catch (error) {
+                          console.log = "Input is " + error;
+                          }
+                          }
 
     $("#toggle").click(function () {
-         $("form").toggle();
+         $("table").toggle();
     });
   </script>
+<br>
 
-
-  <table class="table table-dark table-hover display-1" id="references"></table>
+  <table class="table table-borderless table-hover display-1" id="references"></table>
   <tbody>
     <tr>
       <th></th>
@@ -160,6 +166,9 @@ let text = "<tr><th>Name</th><th>Email</th></tr>";
   document.getElementById("references").innerHTML = text;
   
   </script>
+
+  <br>
+
 
   <button onclick="thankYou()">Thank You!</button>
 
