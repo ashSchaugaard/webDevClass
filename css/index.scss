@@ -1,106 +1,440 @@
-@mixin vertical-align($position) {
-  position: $position;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+$bezier: cubic-bezier(0.75, 0, 0.25, 1);
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: HelveticaNeue, Helvetica, sans-serif;
 }
 
-@mixin all-transition($time) {
-  transition: all $time;
-  -webkit-transition: all $time;
-}
-.menu {
-  font-weight: 100;
-  background: #efefef;
-  width: 150px;
-  height: 100%;
-  padding-left: 50px;
-  position: fixed;
-  z-index: 100;
-  -webkit-box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.2);
-  box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.2);
-  right: -130px;
-  @include all-transition(0.3s);
-  color: #222;
-
-  &:hover,
-  &:focus {
-    transform: translate3d(-130px, 0, 0);
-    animation-timing-function: 1s ease-in;
+.nav {
+  color: white;
+  &__trigger-finger {
+    // The visible part of the trigger, this will be your "nav is closed!"-state
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    width: 15px;
+    height: 10px;
+    margin: 40px;
+    color: hotpink;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      bottom: -5px;
+      right: -5px;
+      background: hotpink;
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 0.3s $bezier;
+    }
+    span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      transition: transform 1s $bezier;
+      background: currentColor;
+      &::before,
+      &::after {
+        // Create the hamburger lines
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        display: block; // Labels are inline elements, it needs a display property that allows it it's own set height like block;
+        height: 2px;
+        background: currentColor; // inherits color set on parent
+        transition: transform 0.4s $bezier, top 0.4s 0.4s $bezier,
+          background 0.2s $bezier;
+      }
+      &::before {
+        top: 0;
+      }
+      &::after {
+        top: calc(100% - 2px);
+      }
+    }
   }
-  .title {
-    top: 50%;
-    @include vertical-align(absolute);
-    transform: rotate(270deg);
-    left: 10px;
-    font-weight: 800;
-    font-size: 15px;
+  &__trigger-input,
+  &__submenu-trigger-input {
+    // We  want to make the input invisible without using display: none;, because that will remove functionality.
+    opacity: 0;
+    width: 0;
+    height: 0;
+    appearance: none;
+    position: fixed;
   }
-  .nav {
-    @include vertical-align(absolute);
-    font-weight: 100;
-
-    li {
-      padding-bottom: 30px;
-      list-style-type: none;
-
-      a {
-        display: block;
-        text-decoration: none;
-        color: inherit;
-        @include all-transition(0.3s);
-
-        &:hover {
-          color: #aaa;
+  &__trigger-input {
+    &:focus {
+      & + label {
+        color: white;
+        &::before {
+          opacity: 1;
         }
+      }
+    }
+    &:checked {
+      & + label {
+        // change the label if the input is checked, this will be your "nav is open! 🎉"-state
+        height: 10px;
+        color: white;
+        span {
+          transform: rotate(45deg);
+          &::before,
+          &::after {
+            top: calc(50% - 1px);
+            transition: transform 0.4s 0.4s $bezier, top 0.4s $bezier,
+              background 0.2s $bezier;
+          }
+          &::after {
+            transform: rotate(90deg);
+          }
+        }
+      }
+      & ~ ul {
+        // We use a general sibling because it's less work, + label + ul would work as well
+        z-index: 9;
+        transform: none;
+        transition: 0.5s $bezier;
+      }
+    }
+  }
+  &__list {
+    // we want to make the top navigation items not visible while the input is not :checked.
+    position: fixed;
+    overflow-y: scroll;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background: hotpink;
+    font-size: 4rem;
+
+    padding: 40px;
+    transform: translate(100vw) rotate(45deg);
+    transition: 0.2s $bezier;
+  }
+  &__item {
+    list-style: none;
+    & + & {
+      margin-top: 20px;
+    }
+  }
+  &__submenu-trigger-input {
+    &:checked {
+      & + label::after {
+        transform: translateY(10px);
+      }
+      & ~ ul {
+        display: block;
+      }
+    }
+    &:focus {
+      & + label::after {
+        transform: translateY(5px);
+      }
+    }
+  }
+  &__submenu-trigger-finger {
+    &::after {
+      content: "";
+      display: inline-block;
+      border: 10px solid transparent;
+      border-top-color: white;
+      transition: 0.4s $bezier;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: inherit;
+  }
+  &__list-child {
+    display: none;
+    font-size: 2rem;
+    margin-top: 10px;
+    padding-left: 2rem;
+  }
+}
+
+main {
+  padding: 6rem 4rem;
+  h1 {
+    font-size: 3rem;
+    font-weight: normal;
+    span {
+      color: hotpink;
+    }
+  }
+  p {
+    line-height: 1.5;
+    margin-top: 1.5rem;
+  }
+}
+
+
+@mixin animation($animate...) {
+  $max: length($animate);
+  $animations: '';
+  @for $i from 1 through $max {
+    $animations: #{$animations + nth($animate, $i)};
+    @if $i < $max {
+      $animations: #{$animations + ", "};
+    }
+  }
+  -webkit-animation: $animations;
+  -moz-animation: $animations;
+  -o-animation: $animations;
+  animation: $animations;
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+//theme
+$yellow:#f5d300;
+$black: #292929;
+$bg: #191919;
+$lines: #757474;
+body {
+  background-color: $bg;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.text {
+  opacity: 0;
+  position: absolute;
+  z-index: 7;
+  text-align: left;
+  margin: -50px 0 0 -150px;
+  width: 300px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  font-size: 48px;
+  font-weight: 700;
+  p {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    @include animation('type .3s steps(60, end) 3.7s');
+  }
+  p:nth-child(2) {
+    @include animation('type2 .5s steps(60, end) 3.7s');
+  }
+  @include animation('on .6s ease-in-out 3.7s forwards');
+  
+  button {
+    border:0;
+    opacity:0;
+    background:$bg;
+    color:$yellow;
+    border:1px solid $bg;
+    letter-spacing:2px;
+    padding:.5rem 2.5rem;
+    font-size:12px;
+    font-weight:600;
+    text-transform:uppercase;
+    cursor:pointer;
+    @include transition(color .5s, background-color .5s);
+    @include animation('on .6s ease-in-out 4s forwards');
+    &:hover {
+      background:$yellow;
+      color:$bg;
+      border:1px solid $bg;
+    }
+  }
+}
+
+.splash {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  &_logo {
+    position: absolute;
+    margin: -15px 0 0 -25px;
+    top: 50vh;
+    z-index: 5;
+    left: 50vw;
+    width: 50px;
+    text-align: center;
+    height: 30px;
+    font-size: 26px;
+    font-weight: 600;
+    color: #ffffff;
+    opacity: 1;
+    will-change: opacity;
+    @include animation('logo .3s ease-in 1.5s forwards, off .6s ease-in-out 3.2s forwards');
+    &:before {
+      display: block;
+      position: absolute;
+      left: 15px;
+      bottom: -5px;
+      width: 20px;
+      height: 1px;
+      background-color: $lines;
+      content: "";
+    }
+    &:after {
+      display: block;
+      position: absolute;
+      left: 15px;
+      top: -5px;
+      width: 20px;
+      height: 1px;
+      background-color: $lines;
+      content: "";
+      will-change: width;
+    }
+  }
+  &_svg {
+    position: relative;
+    margin: auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    svg {
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: visible;
+      backface-visibility: visible;
+      rect {
+        width: 100%;
+        height: 100%;
+        fill: $yellow;
+        stroke: 0;
+        -webkit-clip-path: polygon(45vw 40vh, 55vw 40vh, 55vw 60vh, 45vw 60vh);
+        clip-path: polygon(45vw 40vh, 55vw 40vh, 55vw 60vh, 45vw 60vh);
+        @include animation('expand .7s ease-in forwards 2.7s');
+      }
+    }
+  }
+  &_minimize {
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    svg {
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: visible;
+      backface-visibility: visible;
+      rect {
+        width: 100%;
+        height: 100%;
+        -webkit-clip-path: polygon(0vw 0vh, 100vw 0vh, 100vw 100vh, 0vw 100vh);
+        clip-path: polygon(0vw 0vh, 100vw 0vh, 100vw 100vh, 0vw 100vh);
+        @include animation('scale .2s ease-out forwards 1s, hide 1.3s ease-out forwards 1.2s');
       }
     }
   }
 }
 
-// X-Small devices (portrait phones, less than 576px)
-// No media query for `xs` since this is the default in Bootstrap
+@include keyframes(scale) {
+  100% {
+    -webkit-clip-path: polygon(45vw 40vh, 55vw 40vh, 55vw 60vh, 45vw 60vh);
+    clip-path: polygon(45vw 40vh, 55vw 40vh, 55vw 60vh, 45vw 60vh);
+  }
+}
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
+@include keyframes(hide) {
+  100% {
+    fill: transparent;
+  }
+}
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
+@include keyframes (off) {
+  100% {
+    opacity: 0;
+  }
+}
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
+@include keyframes (on) {
+  100% {
+    opacity: 1;
+  }
+}
 
-// X-Large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
+@include keyframes (logo) {
+  100% {
+    color: $black;
+  }
+}
 
-// XX-Large devices (larger desktops, 1400px and up)
-@media (min-width: 1400px) { ... }
+@include keyframes (type) {
+  0% {
+    width: 0;
+  }
+}
 
+@include keyframes (type2) {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 100;
+  }
+}
 
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px
-);
-
-// `xs` returns only a ruleset and no media query
-// ... { ... }
-
-// `sm` applies to x-small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) { ... }
-
-// `md` applies to small devices (landscape phones, less than 768px)
-@media (max-width: 767.98px) { ... }
-
-// `lg` applies to medium devices (tablets, less than 992px)
-@media (max-width: 991.98px) { ... }
-
-// `xl` applies to large devices (desktops, less than 1200px)
-@media (max-width: 1199.98px) { ... }
-
-// `xxl` applies to x-large devices (large desktops, less than 1400px)
-@media (max-width: 1399.98px) { ... }
+@include keyframes(expand) {
+  0% {}
+  25% {
+    -webkit-clip-path: polygon(0vw 0vh, 55vw 40vh, 55vw 58vh, 45vw 58vh);
+    clip-path: polygon(0vw 0vh, 55vw 40vh, 55vw 60vh, 45vw 60vh);
+    fill: white;
+  }
+  50% {
+    -webkit-clip-path: polygon(0vw 0vh, 100vw 0vh, 55vw 60vh, 45vw 60vh);
+    clip-path: polygon(0vw 0vh, 100vw 0vh, 55vw 60vh, 45vw 60vh);
+    fill: $yellow;
+  }
+  75% {
+    -webkit-clip-path: polygon(0vw 0vh, 100vw 0vh, 55vw 60vh, 0vw 100vh);
+    clip-path: polygon(0vw 0vh, 100vw 0vh, 55vw 60vh, 0vw 100vh);
+    fill: white;
+  }
+  100% {
+    -webkit-clip-path: polygon(0vw 0vh, 100vw 0vh, 100vw 100vh, 0vw 100vh);
+    clip-path: polygon(0vw 0vh, 100vw 0vh, 100vw 100vh, 0vw 100vh);
+    fill: $yellow;
+  }
+}

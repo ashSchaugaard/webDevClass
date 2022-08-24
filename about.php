@@ -11,9 +11,12 @@
   <link rel="stylesheet" href="css/index.css">
    
 </head>
+<body>
 
+<!----
 <body onload="promptFunction()">
   
+
   <script>
     function promptFunction() {
       let visitor = prompt ("Hi! What is your name?");
@@ -40,12 +43,12 @@
   </script>
 
 
-
+----->
 
 <header>
   <div class="heading">
-        <a href="index.html"><img class="pink-logo" src="images/pinkLogo.png" alt="Ashley Schaugaard Logo Image"></a>
-        <a class="btn btn-floating m-2" href="about.html" role="button">
+        <a href="index.php"><img class="pink-logo" src="images/pinkLogo.png" alt="Ashley Schaugaard Logo Image"></a>
+        <a class="btn btn-floating m-2" href="about.php" role="button">
           <i class="fab fa-google">
           <img id="email-icon" src="images/bootstrapIcons/envelope.svg">
           </i>
@@ -55,9 +58,9 @@
       <div class="menu">
        <div class="title">MENU</div>
         <ul class="nav">
-          <li><a href="index.html"><span>home</span></a></li>
-          <li ><a href="portfolio.html"><span>portfolio</span></a></li>
-          <li class="active"><a href="about.html"><span>email me</span></a></li>
+          <li><a href="index.php"><span>home</span></a></li>
+          <li ><a href="portfolio.php"><span>portfolio</span></a></li>
+          <li class="active"><a href="about.php"><span>email me</span></a></li>
         </ul>
   </div>
 </header>
@@ -65,26 +68,114 @@
 
 
 <img id="contactInfo" src="images/ContactInfo.png" class="rounded mx-auto d-block">
- 
+
+    <?php
+          $greeting = "Hello my name is ";
+          $name = "Ashley";
+
+          $combine = $greeting + $name;
+
+          echo $greeting . $name;
+
+          ?>
+    
+   
+    <?php
+
+		$fnameErr = $lnameErr = $emailErr = $contBackErr = "";
+		$fname = $lname = $email = $contBack = $comment = "";
+		$formErr = false;
+
+		if ($_SERVER["REQUEST_METHOD"] == "POST") {
+			
+			if (empty($_POST["fname"])) {
+				$fnameErr = "First name is required.";
+				$formErr = true;
+			} else {
+				$fname = cleanInput($_POST["fname"]);
+				//Use REGEX to accept only letters and white spaces
+				if (!preg_match("/^[a-zA-Z ]*$/",$fname)) {
+					$fnameErr = "Only letters and standard spaces allowed.";
+					$formErr = true;
+				}
+			}
+      if (empty($_POST["lname"])) {
+				$lnameErr = "Last name is required.";
+				$lormErr = true;
+			} else {
+				$lname = cleanInput($_POST["lname"]);
+				//Use REGEX to accept only letters and white spaces
+				if (!preg_match("/^[a-zA-Z ]*$/",$lname)) {
+					$lnameErr = "Only letters and standard spaces allowed.";
+					$formErr = true;
+				}
+			}
+      
+			
+			if (empty($_POST["email"])) {
+				$emailErr = "Email is required.";
+				$formErr = true;
+			} else {
+				$email = cleanInput($_POST["email"]);
+				// Check if e-mail address is formatted correctly
+				if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+					$emailErr = "Please enter a valid email address.";
+					$formErr = true;
+				}
+			}
+			
+			if (empty($_POST["contact-back"])) {
+				$contBackErr = "Please let us know if we can contact you back.";
+				$formErr = true;
+			} else {
+				$contBack = cleanInput($_POST["contact-back"]);
+			}
+			
+			$comment = cleanInput($_POST["comments"]);
+		}
+
+		function cleanInput($data) {
+			$data = trim($data);
+			$data = stripslashes($data);
+			$data = htmlspecialchars($data);
+			return $data;
+		}
+	?>
+
 
 
     <div class="containerAbout">
-      <form action="http://form-test.slccwebdev.com/form-success.php" method="get" target="_blank">
+
+	<!-- Contact Form Start -->
+      <form action=<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?> method="POST" novalidate>
         <p><b>contact me!</b></p>
         <br/>
-        <label for="fname">First Name</label> <br>
-        <input required type="text" id="fname" name="firstname" placeholder="Your name.."> <br>
-    
+	<!-- First Name Field -->
+        <label for="fname">First Name</label>
+						<span class="text-danger">*<?php echo $fnameErr; ?></span>
+						<input type="text" class="form-control" id="fname" placeholder="First Name" name="fname" value="<?php if(isset($fname)) {echo $fname;}?>" /> <br>
+	<!-- Last Name Field -->
         <label for="lname">Last Name</label> <br>
-        <input required type="text" id="lname" name="lastname" placeholder="Your last name.."> <br>
-
+            <span class="text-danger">*<?php echo $lnameErr; ?></span>
+            <input type="text" class="form-control" id="lname" placeholder="Last Name" name="lname" value="<?php if(isset($lname)) {echo $lname;}?>" /> <br>
+	<!-- Email Field -->
         <label for="email">Email</label> <br>
-        <input required type="email" id="email" name="email" placeholder="Your Email..">  <br>
-        <label for="country">Country</label> <br>
-        <select id="country" name="country"> 
-          <option value="australia">Australia</option>
-          <option value="canada">Canada</option>
-          <option value="usa">USA</option>
+            <span class="text-danger">*<?php echo $emailErr; ?></span>
+						<input type="email" class="form-control" id="email" placeholder="name@example.com" name="email" value="<?php if(isset($email)) {echo $email;} ?>" />
+        
+<!-- Radio Button Field -->
+<div class="form-group">
+							<label class="control-label">Do you want continued correspondence?</label>
+							<span class="text-danger">*<?php echo $contBackErr; ?></span>
+							<div class="form-check">
+								<input type="radio" class="form-check-input" name="contact-back" id="yes" value="Yes"  <?php if ((isset($contBack)) && ($contBack == "Yes")) {echo "checked";}?>/>
+								<label class="form-check-label" for="yes" >Yes</label>
+							</div>
+							<div class="form-check">
+								<input type="radio" class="form-check-input" name="contact-back" id="no" value="No" <?php if ((isset($contBack)) && ($contBack == "No")) {echo "checked";}?>/>
+								<label class="form-check-label" for="no" >No</label>
+							</div>
+						</div>
         </select> <br>
     
         <label for="subject">Subject</label> <br>
@@ -94,6 +185,30 @@
       </form>
     </div>
   </div>
+
+<h2>My Skills</h2>
+        <?php
+
+        function skills() {
+        
+        $skills = ["Graphic Design", "Web Design", "Adobe Creative Cloud", "HTML", "CSS", "JavaScript", "Wordpress"];
+
+        echo 'My skills are: <br><ul>';
+
+        foreach ($skills as $ashley) {
+          echo "<li>" . $ashley . "</li>";
+        }
+
+        echo "</ul>";
+
+        }
+
+        // This runs the function
+
+        skills();
+
+        ?>
+
 
   <button id="toggle">Hide This Section</button>
 
@@ -184,6 +299,7 @@ let text = "<tr><th>Name</th><th>Email</th></tr>";
   }
   </script>
   
+  
   <footer class=" text-center text-white" style="background-color: rgba(167, 242, 252)">
     <div class="container p-4 pb-0">
       <!-- Section: Social media -->
@@ -220,7 +336,7 @@ let text = "<tr><th>Name</th><th>Email</th></tr>";
     <div class="text-end p-2" style="background-color: rgba(69, 169, 187, 0.5);">
       <a href="AshleySchaugaardResume.pdf" target="_blank" download><p>Resume</p></a>
       <a href="https://ashannescha.wixsite.com/website" target="_blank"><p>More of my Work</p></a>
-      <a href="/about.html" target="_blank"><p>Contact Me</p></a>
+      <a href="/about.php" target="_blank"><p>Contact Me</p></a>
       <br/><br>
       <div id="copyright"> 
         © 2022 Copyright:
